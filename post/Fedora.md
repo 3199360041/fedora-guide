@@ -64,7 +64,7 @@ TAB 键
 |less| |
 |locate| |
 |grep| |
-|find / -name "*.c" | xargs grep stdio.h | |
+|find / -name "*.c" \| xargs grep stdio.h | |
 |wc| |
 |od| |
 |du| |
