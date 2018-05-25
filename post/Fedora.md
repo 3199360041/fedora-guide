@@ -1,5 +1,4 @@
-# Linux 基础使用 #
-(Based on Fedora 28 x86_64)
+# Fedora 28 x86_64 基础使用 #
 
 # 1.shell基础 #
 ## 1.1 命令补全键 ##
