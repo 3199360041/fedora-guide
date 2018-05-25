@@ -57,15 +57,15 @@ TAB 键
 |命令|功能|
 |:----|----:|
 |ls -ld dir/|查看dir目录的属性信息|
-|stat| 查看文件的属性信息 |
+|stat| 查看文件的属性信息(同一分区inode唯一) |
 |mkdir| create a new directory |
 |rmdir| delete a exists directory |
 |cat| |
 |more| |
 |less| |
 |locate| |
-|find| |
 |grep| |
+|find / -name "*.c" | xargs grep stdio.h | |
 |wc| |
 |od| |
 |du| |
