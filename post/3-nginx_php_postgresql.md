@@ -51,7 +51,7 @@ postgres=# \q
 (linux系统postgres用户密码)
 ```
 sudo passwd -d postgres
-sudo -u postgres passwd
+sudo passwd -u postgres 
 ```
 
 
