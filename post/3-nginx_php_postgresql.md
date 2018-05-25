@@ -1,6 +1,6 @@
-## 安装 nginx + php + postgresql ##
+## 安装 nginx + php + postgresql 
 
-  ### 安装nginx+php ###
+  ### 安装nginx+php 
 ```  
   sudo dnf install nginx php php-common php-fpm php-cli php-opcache php-pear php-pecl-mongodb php-pecl-apcu php-pecl-redis php-pecl-memcache php-pecl-memcached php-pecl-zip php-gd php-mbstring php-mcrypt php-xml php-pdo php-mysqlnd php-pgsql -y
 
@@ -34,7 +34,7 @@ sudo mv composer.phar /usr/local/bin/composer
 ```
 composer config -g repo.packagist composer https://packagist.phpcomposer.com
 ```
-  ### 安装 postgresql ###
+  ### 安装 postgresql 
 详细步骤 []: <https://www.postgresql.org/download/linux/redhat/>
 ```
 sudo dnf install postgresql postgresql-server postgresql-contrib postgresql-devel

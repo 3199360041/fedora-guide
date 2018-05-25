@@ -1,4 +1,4 @@
-  ### 关闭SELinux ###
+  ### 关闭SELinux 
 ```
   sudo vim /etc/selinux/config
 ```

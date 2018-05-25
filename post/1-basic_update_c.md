@@ -1,4 +1,4 @@
-  ### 更新系统及安装vim及C开发套件 ###
+  ### 更新系统及安装vim及C开发套件 
 ```
   sudo dnf update -y
   sudo dnf install vim -y
