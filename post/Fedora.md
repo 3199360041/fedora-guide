@@ -65,8 +65,11 @@ TAB 键
 |locate| |
 |grep| |
 |find / -name "*.c" \| xargs grep stdio.h | |
-|wc| |
-|od| |
-|du| |
-|df| |
+|find / -name "*.c" \|wc -l||
+|find / -name "*.c" -exec wc -l {} \ ||
+|od (octal dump) |od -tx1 foo.c|
+|du(disk usage)| 计算目录在磁盘中所占空间大小，默认kb为单位|
+|df(disk free)| 磁盘使用情况 |
+|find / -name "*.c" > /dev/null 2>&1|标准输出，标准错误重定向到无底洞文件|
+|&|让程序在后台执行|
 
