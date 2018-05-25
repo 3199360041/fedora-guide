@@ -72,4 +72,48 @@ TAB 键
 |df(disk free)| 磁盘使用情况 |
 |find / -name "*.c" > /dev/null 2>&1|标准输出，标准错误重定向到无底洞文件|
 |&|让程序在后台执行|
+|awk '{print $1 $2}' /proc/meminfo||
+|awk -F '/' '{print $3}' ../data/urls||
+|lsb_release -a||
+|uname -a||
 
+
+关闭桌面环境(略)
+
+# 4.用户管理 #
+## 4.1 当前用户 ##
+```shell
+whoami
+```
+## 4.2 所有用户信息 ##
+```shell
+cat /etc/passwd
+```
+## 4.3 查看用户在哪些组里面 ##
+```shell
+groups [user] #如果不填写user，代表当前用户所在的组
+```
+## 4.4 查看组里面有哪些用户 ##
+```shell
+cat /etc/group
+```
+## 4.5 su&sudo ##
+su:switch user
+
+```shell
+su root #切换到root用户
+sudo passwd root #修改root密码
+```
+## 4.6 创建用户与修改密码 ##
+useradd
+
+```shell
+sudo useradd xiaoming -s /bin/bash -g xiaoming -m
+
+    -s #指定新用户登陆是shell类型
+    -g #指定所属组,该组必须已经存在，不指定的时候自动创建一个与用户名重名的用户组
+    -d #指定用户目录，该目录必须存在
+    -m #用户目录不存在时，自动创建该目录
+
+sudo passwd xiaoming #设置xiaoming的密码
+```
