@@ -206,4 +206,20 @@ sudo netstat -apn
 ```
 
 # 9. 进程管理 
+```shell
+ps -axu -ef
+jobs -l -p -r -s
+fg 
+kill -9 2357
+top
+```
 # 10. 环境变量 
+```shell
+sudo vim ~/.bashrc 
+sudo vim /etc/profile
+    export PATH=$PATH:/path/to/file
+LIBRARY_PATH #用于在程序编译期间查找动态链接库时指定查找共享库的路径
+LD_LIBRARY_PATH #用于在程序加载运行期间查找动态链接库时指定除了系统默认路径之外的其他路径
+C_INCLUDE_PATH #指明c头文件的搜索路径
+CPLUS_INCLUDE_PATH  #指明c++头文件的搜索路径
+```
