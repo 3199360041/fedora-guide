@@ -1,0 +1,20 @@
+{
+    "files.autoSave": "afterDelay",
+    "workbench.colorTheme": "Visual Studio Light",
+    "workbench.iconTheme": "vscode-icons",
+    "editor.fontFamily": "Yahei Consolas Hybrid",
+    "window.zoomLevel": 1,
+    "files.associations": {
+        "*.h": "c",
+        "*.c": "c"
+    },
+    "explorer.confirmDelete": false,
+    "extensions.ignoreRecommendations": true,
+    "explorer.confirmDragAndDrop": false,
+    "emmet.includeLanguages": {
+        "vue-html": "html",
+        "vue": "html",
+        "javascript": "javascriptreact"
+    },
+    "emmet.triggerExpansionOnTab": true
+}

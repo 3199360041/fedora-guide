@@ -1,5 +1,5 @@
 # Linux基础（Fedora 28 x86_64）
-
+## 文件由文件属性和文件内容构成！！！
 # 1.shell基础 
 ## 1.1 命令补全键 
 
@@ -30,7 +30,7 @@ TAB 键
 ```shell
     sudo fdisk -l
 ```
-现在基本都是scsi，sata，use硬盘
+现在基本都是scsi，sata，use硬盘，即sdx表示分区
 
 常见分区约定:
 
@@ -59,7 +59,7 @@ TAB 键
 |stat| 查看文件的属性信息(同一分区inode唯一) |
 |mkdir| create a new directory |
 |rmdir| delete a exists directory |
-|cat| |
+|cat| 查看文件内容 |
 |more| |
 |less| |
 |locate| |
@@ -74,11 +74,14 @@ TAB 键
 |&|让程序在后台执行|
 |awk '{print $1 $2}' /proc/meminfo||
 |awk -F '/' '{print $3}' ../data/urls||
-|lsb_release -a||
-|uname -a||
+|lsb_release -a|查看系统信息|
+|uname -a|查看内核信息|
+|ln -s|创建软链接|  
+硬链接  Hard Link ---- 与i节点（Inode Index）有关  
+软链接  Symbolic Link ----文件属性的拷贝
 
 
-关闭桌面环境(略)
+### 关闭桌面环境(略)
 
 # 4.用户管理 
 ## 4.1 当前用户 
@@ -98,7 +101,7 @@ groups [user] #如果不填写user，代表当前用户所在的组
 cat /etc/group
 ```
 ## 4.5 su&sudo 
-su:switch user
+su  切换用户
 
 ```shell
 su root #切换到root用户
@@ -137,11 +140,9 @@ deluser --remove-home [user]
 groupdel [group]
 ```
 # 5. 文件属性
-umask 0002
-
-777
-
-666
+umask 0002  
+文件   777  
+目录   666  
 ```
 chmod 
 chown
@@ -163,8 +164,9 @@ chown
 -x 能进入此目录，利用cd等命令进入此目录
 
 # 6. 压缩包管理 
-sudo dnf install rar unrar
 ```
+sudo dnf install rar unrar
+
 tar -czvf | -xzvf -C /path/to/dir #tar.gz
 tar -cjvf | -xjvf -C /path/to/dir #tar.gz.bz2
 rar a -r myrar.rar mydir
@@ -173,22 +175,25 @@ zip -r mydir.zip mydir
 unzip mydir.zip
 tar -xvJf node-v10.2.0-linux-x64.tar.xz 
 ```
-# 7. 软件安装(略) 
+# 7. 软件安装(DNF、源码编译安装、下载二进制包) 
 # 8. 网络管理 
+临时更改ip
 ```shell
-ifconfig enp0s25 192.168.30.233(临时更改)
+ifconfig enp0s25 192.168.30.233
 ```
-设置静态ip
+<!-- 设置静态ip
 ```shell
 
-```
+``` -->
 修改dns
 ```shell
 sudo vim /etc/resolv.conf
 nameserver 8.8.8.8
-```
+```  
 ping
-
+```
+ping www.baidu.com
+```
 netstat
 ```
 -a #显示所有socket，包括正在监听的
@@ -202,24 +207,51 @@ netstat
 ```
 常用组合
 ```
-sudo netstat -apn
+sudo netstat -anp
 ```
 
 # 9. 进程管理 
 ```shell
-ps -axu -ef
+who -H -q
+-H  #显示每列的标题
+-q  #显示登录用户名和登录用户数量
+```
+tty----Teletype(字符型设备)     
+ctrl+alt+[F1-F6]  
+
+pty----Pseudo Terminal (图形用户终端，远程登录终端)      
+ctrl+alt+F7  
+
+ps----process status
+```shell
+ps -axu
+ps -ef
+```
+-a  显示终端上的所有进程，包括其他用户的进程  
+-x  显示没有控制终端的进程,并且多了stat字段  
+-e  显示所有进程  
+-f  全格式，多了UID，PPID，STIME字段  
+-u  把当前用户的进程全部显示出来，多了%CPU、%MEM、VSZ、RSS、STAT字段
+
+```
 jobs -l -p -r -s
 fg 
-kill -9 2357
+kill -9 2357 #“杀死”2357号进程
+kill -l #查看信号
 top
 ```
 # 10. 环境变量 
 ```shell
-sudo vim ~/.bashrc 
+env
+echo $PATH
+sudo vim ~/.bashrc
+echo "export PATH=$PATH:/home/pzzrudlf/exe" >> ~/.bashrc
+sudo source ~/.bashrc 
 sudo vim /etc/profile
-    export PATH=$PATH:/path/to/file
-LIBRARY_PATH #用于在程序编译期间查找动态链接库时指定查找共享库的路径
-LD_LIBRARY_PATH #用于在程序加载运行期间查找动态链接库时指定除了系统默认路径之外的其他路径
-C_INCLUDE_PATH #指明c头文件的搜索路径
+export PATH=$PATH:/path/to/file
+sudo source /etc/profile    
+LIBRARY_PATH        #用于在程序编译期间查找动态链接库时指定查找共享库的路径
+LD_LIBRARY_PATH     #用于在程序加载运行期间查找动态链接库时指定除了系统默认路径之外的其他路径
+C_INCLUDE_PATH      #指明c头文件的搜索路径
 CPLUS_INCLUDE_PATH  #指明c++头文件的搜索路径
 ```
