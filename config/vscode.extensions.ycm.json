@@ -1,0 +1,15 @@
+{
+    "ycmd.path": "/home/pzzrudlf/.vim/bundle/YouCompleteMe/third_party/ycmd",
+    "ycmd.global_extra_config": "/home/pzzrudlf/.ycm_extra_conf.py",
+    "ycmd.python": "/usr/bin/python",
+    "ycmd.confirm_extra_conf": false,
+    "ycmd.enabled_languages": [
+        "cpp",
+        "c",
+        "js",
+        "ts",
+        "py",
+    ],
+    "ycmd.use_imprecise_get_type": false,
+    "ycmd.lint_run": "onCall",
+}

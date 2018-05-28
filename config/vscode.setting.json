@@ -3,18 +3,53 @@
     "workbench.colorTheme": "Visual Studio Light",
     "workbench.iconTheme": "vscode-icons",
     "editor.fontFamily": "Yahei Consolas Hybrid",
+    "editor.fontSize": 16,
     "window.zoomLevel": 1,
+
+    "emmet.includeLanguages": {
+        "vue-html": "html",
+        "vue": "html",
+        "javascript": "javascriptreact"
+    },
+    "emmet.triggerExpansionOnTab": true,
+
+    "eslint.autoFixOnSave": true,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        {
+            "language": "vue",
+            "autoFix": true
+        }
+    ],
+
+    "http.proxy": "http://127.0.0.1:1080",
+    "http.proxyStrictSSL": false,
+
+    "go.useCodeSnippetsOnFunctionSuggest": true,
+    "go.buildOnSave": true,
+    "go.lintOnSave": true,
+    "go.vetOnSave": true,
+    "go.buildFlags": [
+        
+    ],
+    "go.lintFlags": [
+        
+    ],
+    "go.vetFlags": [
+        
+    ],
+    "go.formatTool": "goreturns",
+    "go.goroot": "/usr/lib/golang",
+    "go.gopath": "/home/pzzrudlf/go",
+
+    "php.validate.executablePath": "/usr/bin/php",
+        
     "files.associations": {
         "*.h": "c",
         "*.c": "c"
     },
     "explorer.confirmDelete": false,
     "extensions.ignoreRecommendations": true,
-    "explorer.confirmDragAndDrop": false,
-    "emmet.includeLanguages": {
-        "vue-html": "html",
-        "vue": "html",
-        "javascript": "javascriptreact"
-    },
-    "emmet.triggerExpansionOnTab": true
+    "explorer.confirmDragAndDrop": false
 }

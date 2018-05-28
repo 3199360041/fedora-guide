@@ -1,4 +1,4 @@
-## 安装 nginx + php + postgresql 
+## 安装 nginx + php + postgresql + mariadb 
 
   ### 安装nginx+php 
 ```  
@@ -53,5 +53,9 @@ postgres=# \q
 sudo passwd -d postgres
 sudo passwd -u postgres 
 ```
-
+### 安装 mariadb
+```shell
+sudo dnf install mariadb mariadb-server
+/usr/bin/mysql_secure_installation
+```
 
