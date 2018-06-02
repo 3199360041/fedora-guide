@@ -2,9 +2,10 @@
 
   ### 安装nginx+php 
 ```  
-  sudo dnf install nginx php php-common php-fpm php-cli php-opcache php-pear php-pecl-mongodb php-pecl-apcu php-pecl-redis php-pecl-memcache php-pecl-memcached php-pecl-zip php-gd php-mbstring php-mcrypt php-xml php-pdo php-mysqlnd php-pgsql php-intl php-devel -y
+  sudo dnf install nginx php php-common php-fpm php-cli php-opcache php-pear php-pecl-mongodb php-pecl-apcu php-pecl-apc php-pecl-redis php-pecl-memcache php-pecl-memcached php-pecl-zip php-gd php-mbstring php-mcrypt php-xml php-pdo php-mysqlnd php-pgsql php-intl php-devel -y
 
   systemctl stop httpd.service
+  systemctl disable httpd.service
 ```
 设置nginx和php-fpm随系统自动启动
 ```

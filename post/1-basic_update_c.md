@@ -1,7 +1,13 @@
   ### 更新系统及安装vim及C开发套件 
 ```
+  sudo dnf remove libreoffice-draw libreoffice-graphicfilter libreoffice-impress libreoffice-writer libreoffice-pyuno libreoffice-math libreoffice-calc libreoffice-emailmerge 
+
+  sudo dnf install gnome-terminal-nautilus
+
   sudo dnf update -y
+
   sudo dnf install vim -y
+
   sudo dnf groupinstall 'C Development Tools and Libraries' -y
 ```
 格式化c代码命令
