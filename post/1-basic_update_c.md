@@ -19,3 +19,12 @@ indent -kr -i8 -ts8 -sob -l80 -ss -bs -psl $1
 ```
 sudo cp cid.sh /usr/local/bin/cid
 ```
+
+```
+vim /etc/gdm/custom.conf
+
+[daemon]
+AutomaticLoginEnable=True
+AutomaticLogin=pzzrudlf
+
+```
