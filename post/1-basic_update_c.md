@@ -1,4 +1,4 @@
-  ### 更新系统及安装vim及C开发套件 
+  ### 移除libreoffice, 安装vim、gnome-terminal-nautilus及C开发套件，设置自动登录 
 ```
   sudo dnf remove libreoffice-draw libreoffice-graphicfilter libreoffice-impress libreoffice-writer libreoffice-pyuno libreoffice-math libreoffice-calc libreoffice-emailmerge 
 
@@ -20,6 +20,7 @@ indent -kr -i8 -ts8 -sob -l80 -ss -bs -psl $1
 sudo cp cid.sh /usr/local/bin/cid
 ```
 
+设置自动登录
 ```
 vim /etc/gdm/custom.conf
 
