@@ -40,6 +40,7 @@ sudo chsh -s /usr/local/bin/zsh
 ###   安装Oh My ZSH
 ```shell
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 brew install wget
 
 brew install git-flow
@@ -47,14 +48,18 @@ brew install git-flow
 brew cask install visual-studio-code
 
 brew cask install google-chrome
-
+```
+###   安装python3
+```shell
 brew install python@3
 
 vim ~/.pip/pip.conf
 
 [global]
 index-url=https://pypi.tuna.tsinghua.edu.cn/simple
-
+```
+###   安装php7.3
+```shell
 brew search php
 
 brew install php@7.3
@@ -67,16 +72,19 @@ brew link php@7.3
    echo 'export PATH="/usr/local/opt/php@7.3/bin:$PATH"' >> ~/.bash_profile
    echo 'export PATH="/usr/local/opt/php@7.3/sbin:$PATH"' >> ~/.bash_profile
 ```
-###   安装nginx
 
+###   安装composer
+```shell
+brew install composer
+
+composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
+```
+###   安装nginx
 ```shell
 brew instal nginx  
- 
+
 sudo brew services start nginx
 
 curl -I http://localhost:8080/
 
-brew install composer
-
-composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
 ```
