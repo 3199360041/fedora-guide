@@ -50,7 +50,7 @@ brew cask install visual-studio-code
 brew cask install google-chrome
 ```
 ### 安装iTerm2
-![iTerm2](https://iterm2.com/downloads/stable/latest)
+![iTerm2](https://iterm2.com)
 
 ###   安装python3
 ```shell
