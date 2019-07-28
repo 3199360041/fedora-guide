@@ -1,4 +1,6 @@
 ```shell
+csrutil status
+
 csrutil disable
 
 reboot
