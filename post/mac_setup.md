@@ -1,12 +1,11 @@
 xcode-select --install
 
-安装iTerm2
-
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew tap homebrew/cask
 
 cd "$(brew --repo)"
+
 git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
 
 cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
@@ -14,7 +13,6 @@ git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/home
 
 cd "$(brew --repo)"/Library/Taps/homebrew/homebrew-cask
 git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git
-
 
 
 bash（默认 shell）用户：
@@ -28,8 +26,9 @@ zsh 用户：
 echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.zshrc
 source ~/.zshrc
 
-
 brew update
+
+安装iTerm2
 
 brew install zsh
 
