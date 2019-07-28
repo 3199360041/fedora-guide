@@ -1,3 +1,9 @@
+```shell
+csrutil disable
+
+reboot
+```
+
 ###   安装command line 
 ```shell
 xcode-select --install
