@@ -1,8 +1,13 @@
+###   安装command line 
 ```shell
 xcode-select --install
-
+```
+###   安装Homebrew
+```shell
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
+```
+###   设置Homebrew源
+```shell
 brew tap homebrew/cask
 
 cd "$(brew --repo)"
