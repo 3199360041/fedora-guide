@@ -34,6 +34,12 @@ brew update
 
 brew install zsh
 
+cat /etc/shells
+
+sudo su
+
+#echo "/usr/local/bin/zsh" >> /etc/shells
+
 sudo chsh -s /usr/local/bin/zsh
 ```
 
