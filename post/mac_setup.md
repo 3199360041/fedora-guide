@@ -1,50 +1,53 @@
-xcode-select --install
+###   xcode-select --install
 
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+###   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-brew tap homebrew/cask
+###   brew tap homebrew/cask
 
-cd "$(brew --repo)"
+###   cd "$(brew --repo)"
 
-git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
+        git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
 
-cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
-git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
+###   cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
 
-cd "$(brew --repo)"/Library/Taps/homebrew/homebrew-cask
-git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git
+        git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
+
+###   cd "$(brew --repo)"/Library/Taps/homebrew/homebrew-cask
+
+        git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git
 
 
-bash（默认 shell）用户：
+###   bash（默认 shell）用户：
 
 echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.bash_profile
+
 source ~/.bash_profile
 
-
-zsh 用户：
+###   zsh 用户：
 
 echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.zshrc
+
 source ~/.zshrc
 
-brew update
+###   brew update
 
-安装iTerm2
+###   安装iTerm2
 
-brew install zsh
+###   brew install zsh
 
-sudo chsh -s /usr/local/bin/zsh
+###   sudo chsh -s /usr/local/bin/zsh
 
-安装Oh My ZSH
+###   安装Oh My ZSH
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-brew install wget
-brew install git-flow
+###   brew install wget
+###   brew install git-flow
 
 
-brew cask install visual-studio-code
-brew cask install google-chrome
+###   brew cask install visual-studio-code
+###   brew cask install google-chrome
 
-brew install python@3
+###   brew install python@3
 
 vim ~/.pip/pip.conf
 
