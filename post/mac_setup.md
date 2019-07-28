@@ -27,25 +27,28 @@ git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git
 echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.bash_profile
 
 source ~/.bash_profile
-```
 
-###   zsh 用户：
+brew update
+```
+###   安装zsh
+```shell
+brew install zsh
+```
+###   更改shell为zsh
 ```shell
 echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.zshrc
 
 source ~/.zshrc
 
-brew update
-
-brew install zsh
-
 cat /etc/shells
 
 sudo su
 
-#echo "/usr/local/bin/zsh" >> /etc/shells
+echo "/usr/local/bin/zsh" >> /etc/shells
 
-sudo chsh -s /usr/local/bin/zsh
+chsh -s /usr/local/bin/zsh
+
+exit
 ```
 
 ###   安装Oh My ZSH
